@@ -13,7 +13,7 @@ const HERO_SLIDES = [
     title: '3D/4D HD Live Ultrasound',
     tagline: 'Vivid Photorealistic Imaging',
     desc: 'Vivid imaging for expectant parents to see every detail before birth with photorealistic HD clarity.',
-    imageUrl: '/images/three_d_four_d_ultrasound.jpg',
+    imageUrl: '/images/3D_4D ultrasound.jpg',
     badge: '3D/4D Elective & Diagnostic',
     icon: Baby,
   },
@@ -22,7 +22,7 @@ const HERO_SLIDES = [
     title: 'OB/GYN & Gender Reveal',
     tagline: '14+ Weeks Gender Verification',
     desc: 'Celebrating family milestones with professional prenatal screening, fetal heartbeat, and gender verification.',
-    imageUrl: '/images/ob_gyn_ultrasound.jpg',
+    imageUrl: '/images/gynecological-ultrasound.jpg',
     badge: 'Prenatal Care',
     icon: HeartPulse,
   },
@@ -31,7 +31,7 @@ const HERO_SLIDES = [
     title: 'Vascular & Abdomen Doppler',
     tagline: 'Precision Doppler Diagnostics',
     desc: 'Comprehensive Doppler scans for internal health, blood flow, DVT screening, liver, gallbladder, and kidneys.',
-    imageUrl: '/images/vascular_ultrasound.jpg',
+    imageUrl: '/images/vascular-ultrasound.jpg',
     badge: 'Diagnostic Doppler',
     icon: Activity,
   },
@@ -40,7 +40,7 @@ const HERO_SLIDES = [
     title: 'Mobile Bedside Ultrasound',
     tagline: 'Advanced Imaging. Anywhere You Need It.',
     desc: 'Bringing hospital-quality diagnostic imaging directly to your residence, clinic facility, or bedrest setup.',
-    imageUrl: '/images/mobile_ultrasound.jpg',
+    imageUrl: '/images/Medical-van.jpg',
     badge: '24/7 Mobile Service',
     icon: Truck,
   },
@@ -511,7 +511,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 h-80 sm:h-96">
             <img
-              src="/images/glims_mobile_response.jpg"
+              src="/images/Medical-van.jpg"
               alt="Mobile Diagnostic Ultrasound Service"
               className="w-full h-full object-cover"
             />

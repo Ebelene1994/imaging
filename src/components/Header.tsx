@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
           className="flex items-center group text-left focus:outline-none"
         >
           <img
-            src="/images/logo-glims-imaging-center.png"
+            src="/images/logo-main.png"
             alt="Glims Imaging Center"
             className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
           />

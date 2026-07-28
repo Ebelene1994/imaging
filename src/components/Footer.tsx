@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <img
-              src="/images/logo-glims-imaging-center.png"
+              src="/images/logo-main.png"
               alt="Glims Imaging Center - Diagnostic Ultrasound Laurel MD"
               className="h-12 sm:h-14 w-auto object-contain rounded-lg shadow-sm"
             />

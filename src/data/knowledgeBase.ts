@@ -56,7 +56,7 @@ export const SERVICES: ServiceItem[] = [
       'Immediate digital shareable media for family & friends',
     ],
     clinicalIndications: ['Elective fetal bonding', 'Fetal facial structure view', 'Fetal movement observation'],
-    imageUrl: '/images/three_d_four_d_ultrasound.jpg',
+    imageUrl: '/images/3D_4D ultrasound.jpg',
     isPopular: true,
   },
   {
@@ -82,7 +82,7 @@ export const SERVICES: ServiceItem[] = [
       'Direct transmission to attending physician',
     ],
     clinicalIndications: ['DVT venous screening', 'Abdominal pain evaluation', 'Bedrest pregnancy assessment', 'Bedside vascular check'],
-    imageUrl: '/images/mobile_ultrasound.jpg',
+    imageUrl: '/images/Medical-van-with -Glims-Imaging-Center.jpg',
     isPopular: true,
   },
   {
@@ -108,7 +108,7 @@ export const SERVICES: ServiceItem[] = [
       'Compassionate patient care',
     ],
     clinicalIndications: ['Dating pregnancy', 'Fetal growth check', 'Pelvic pain', 'Abnormal bleeding', 'Cyst/fibroid screening'],
-    imageUrl: '/images/ob_gyn_ultrasound.jpg',
+    imageUrl: '/images/gynecological-ultrasound.jpg',
   },
   {
     id: 'gender-reveal-ultrasound',
@@ -133,7 +133,7 @@ export const SERVICES: ServiceItem[] = [
       'Fun gender reveal prop options',
     ],
     clinicalIndications: ['Early gender confirmation', 'Fetal heart tone listen'],
-    imageUrl: '/images/gender_reveal_ultrasound.jpg',
+    imageUrl: '/images/gender-determination.jpg',
     isPopular: true,
   },
   {
@@ -159,7 +159,7 @@ export const SERVICES: ServiceItem[] = [
       'Comprehensive report sent to cardiologist or PCP',
     ],
     clinicalIndications: ['Leg pain or swelling', 'DVT suspicion', 'Dizziness / carotid bruit', 'Varicose vein evaluation'],
-    imageUrl: '/images/vascular_ultrasound.jpg',
+    imageUrl: '/images/vascular-ultrasound.jpg',
   },
   {
     id: 'abdomen-ultrasound',
@@ -184,7 +184,7 @@ export const SERVICES: ServiceItem[] = [
       'Prompt diagnostic reporting',
     ],
     clinicalIndications: ['Right upper quadrant pain', 'Gallstone screening', 'Kidney stone evaluation', 'Unexplained bloating or elevated liver enzymes'],
-    imageUrl: '/images/abdomen_ultrasound.jpg',
+    imageUrl: '/images/abdominal-ultrasound.jpg',
   },
 ];
 
