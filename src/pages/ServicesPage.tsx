@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { SERVICES, CENTER_INFO, FAQS } from '../data/knowledgeBase';
 import { DemographicGroup, PageTab, ServiceItem } from '../types';
+import { SEO } from '../components/SEO';
 
 interface ServicesPageProps {
   onNavigateTab: (tab: PageTab) => void;
@@ -35,6 +36,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
   return (
     <div id="services-page" className="bg-slate-50 min-h-screen py-12 px-4 sm:px-8 font-sans">
+      <SEO
+        title="Diagnostic & Elective Ultrasound Services | Glims Imaging Center"
+        description="Explore 3D/4D ultrasound, OB/GYN prenatal scans, mobile bedside imaging, vascular Doppler, and abdominal diagnostics in Laurel, MD."
+        canonical="/services"
+      />
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">

@@ -3,6 +3,8 @@ import {
   Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle2, ShieldAlert, ExternalLink 
 } from 'lucide-react';
 import { CENTER_INFO } from '../data/knowledgeBase';
+import { SocialIcons } from '../components/SocialIcons';
+import { SEO } from '../components/SEO';
 
 export const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -21,6 +23,11 @@ export const ContactPage: React.FC = () => {
 
   return (
     <div id="contact-page" className="bg-slate-50 min-h-screen py-12 px-4 sm:px-8 font-sans">
+      <SEO
+        title="Contact & Location | Glims Imaging Center Laurel MD"
+        description="Contact Glims Imaging Center in Laurel, MD. View our phone numbers, hours, office location, directions, and send us a direct message."
+        canonical="/contact"
+      />
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -89,6 +96,22 @@ export const ContactPage: React.FC = () => {
               Emails answered within 1-2 business hours.
             </p>
           </div>
+        </div>
+
+        {/* Social Media Connect Banner */}
+        <div className="bg-gradient-to-r from-[#0B4EA2] to-blue-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <span className="text-emerald-300 font-extrabold text-xs uppercase tracking-widest block mb-1">
+              Join Our Healthcare Community
+            </span>
+            <h3 className="text-xl sm:text-2xl font-black">
+              Follow Glims Imaging Center On Social Media
+            </h3>
+            <p className="text-xs text-blue-100 mt-1 max-w-xl">
+              Stay updated with ultrasound health tips, 3D/4D keepsakes, patient stories, and center announcements across all our platforms.
+            </p>
+          </div>
+          <SocialIcons variant="colorful" className="flex items-center gap-3 shrink-0" iconClassName="w-5 h-5" />
         </div>
 
         {/* Form and Hours Split */}

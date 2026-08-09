@@ -4,6 +4,7 @@ import {
 } from 'lucide-react';
 import { PREP_GUIDES, GENERAL_PREP_FAQS, CENTER_INFO } from '../data/knowledgeBase';
 import { PageTab } from '../types';
+import { SEO } from '../components/SEO';
 
 interface PatientPrepPageProps {
   onNavigateTab: (tab: PageTab) => void;
@@ -16,6 +17,11 @@ export const PatientPrepPage: React.FC<PatientPrepPageProps> = ({ onNavigateTab 
 
   return (
     <div id="patient-prep-page" className="bg-slate-50 min-h-screen py-12 px-4 sm:px-8 font-sans">
+      <SEO
+        title="Patient Preparation Guide | Glims Imaging Center Laurel MD"
+        description="Preparation instructions for 3D/4D ultrasound, pelvic, abdominal, and vascular Doppler scans at Glims Imaging Center."
+        canonical="/prep"
+      />
       <div className="max-w-5xl mx-auto space-y-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">

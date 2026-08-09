@@ -1,4 +1,4 @@
-import { ServiceItem, Testimonial, FaqItem, ScanPrepGuide } from '../types';
+import { ServiceItem, Testimonial, FaqItem, ScanPrepGuide, TeamMember } from '../types';
 
 export const CENTER_INFO = {
   name: 'Glims Imaging Center',
@@ -29,6 +29,13 @@ export const CENTER_INFO = {
     deepBlue: '#0B4EA2',
     healthcareGreen: '#2AA84A',
     purpleAccent: '#7A2CA5',
+  },
+  social: {
+    facebook: 'https://www.facebook.com/glimsimagingcenter/',
+    youtube: 'https://www.youtube.com/@glimsImagingcenter?sub_confirmation=1',
+    instagram: 'https://www.instagram.com/glimsimagingcenter708/',
+    tiktok: 'https://www.tiktok.com/@glimsimagingcenter4',
+    x: 'https://x.com/glimsimaging5',
   },
 };
 
@@ -373,3 +380,40 @@ export const PREP_GUIDES: ScanPrepGuide[] = [
     ],
   },
 ];
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: 'lead-sonographer',
+    name: 'Christiana Coffie, RDMS',
+    role: 'Lead Diagnostic Sonographer & Founder',
+    credentials: 'RDMS (OB/GYN, Abdomen), RVT (Vascular)',
+    experienceYears: 14,
+    photo: '/images/team1.png',
+    bio: 'Christiana brings over 14 years of clinical excellence in diagnostic ultrasonography. Trained at premier medical institutions, she specializes in high-definition 3D/4D obstetrical imaging and vascular Doppler studies with compassionate patient care.',
+    specialties: ['3D/4D Obstetric Scans', 'Vascular Doppler', 'Abdominal Diagnostics', 'High-Risk Pregnancy Imaging'],
+    socialLinks: { email: 'info@glimsimagingcenter1.com' }
+  },
+  {
+    id: 'radiology-specialist',
+    name: 'Dr. Marcus Vance, MD',
+    role: 'Board Certified Consulting Radiologist',
+    credentials: 'MD, DABR (Diagnostic Radiology)',
+    experienceYears: 18,
+    photo: '/images/team2.png',
+    bio: 'Dr. Vance oversees diagnostic image interpretation at Glims Imaging Center. With expertise in cross-sectional imaging and ultrasound subspecialties, he ensures fast, accurate reports for treating physicians.',
+    specialties: ['Ultrasound Subspecialty', 'Vascular Duplex', 'Diagnostic Pelvic Surveys', 'Quality Assurance'],
+    socialLinks: { linkedin: '#' }
+  },
+  {
+    id: 'medical-staff-lead',
+    name: 'Sarah Jenkins, BSN, RN',
+    role: 'Clinical Patient Coordinator & Care Lead',
+    credentials: 'BSN, RN, BLS Certified',
+    experienceYears: 9,
+    photo: '/images/team3.png',
+    bio: 'Sarah ensures every patient at Glims Imaging Center enjoys a seamless, welcoming, and relaxed visit from check-in through appointment completion and report delivery.',
+    specialties: ['Patient Advocacy', 'Preparation Guidance', 'Appointment Concierge', 'Maternal Comfort'],
+    socialLinks: { email: 'info@glimsimagingcenter1.com' }
+  }
+];
+

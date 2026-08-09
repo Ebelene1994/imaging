@@ -76,3 +76,19 @@ export interface ScanPrepGuide {
   whatToBring: string[];
   faqs: { q: string; a: string }[];
 }
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  credentials: string;
+  experienceYears: number;
+  photo: string;
+  bio: string;
+  specialties: string[];
+  socialLinks?: {
+    email?: string;
+    linkedin?: string;
+  };
+}
+

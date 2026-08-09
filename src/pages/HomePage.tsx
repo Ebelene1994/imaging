@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Calendar, Phone, MessageSquare, ShieldCheck, HeartPulse, Baby, Truck, Activity, 
-  ShieldAlert, Sparkles, CheckCircle2, ChevronRight, ChevronLeft, Clock, MapPin, Users, Star, ArrowRight, HelpCircle
+  ShieldAlert, Sparkles, CheckCircle2, ChevronRight, ChevronLeft, Clock, MapPin, Users, Star, ArrowRight, HelpCircle, ExternalLink
 } from 'lucide-react';
 import { CENTER_INFO, SERVICES, TESTIMONIALS, FAQS } from '../data/knowledgeBase';
 import { PageTab, ServiceItem } from '../types';
 import { CountUpStat } from '../components/CountUpStat';
+import { SEO } from '../components/SEO';
 
 const HERO_SLIDES = [
   {
@@ -221,6 +222,11 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div id="home-page" className="font-sans bg-gray-50 text-gray-900">
+      <SEO
+        title="Glims Imaging Center | 3D/4D & Diagnostic Ultrasound Laurel MD"
+        description="Premier 3D/4D HD ultrasound, OB/GYN prenatal scans, vascular Doppler, abdominal diagnostic ultrasound, and 24/7 mobile bedside imaging in Laurel, MD."
+        canonical="/"
+      />
       {/* Hero & Main Content Container - Sleek Interface Style */}
       <section id="hero" className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-6">
@@ -597,17 +603,21 @@ export const HomePage: React.FC<HomePageProps> = ({
               </h2>
             </div>
             <div className="flex items-center gap-3">
-              <span className="hidden sm:inline-block text-[11px] font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-full border border-slate-200">
-                Hover to pause
-              </span>
-              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200 text-xs font-bold text-slate-700">
+              <a
+                href="https://www.facebook.com/glimsimagingcenter/reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-[#0B4EA2] hover:bg-blue-900 text-white px-4 py-2 rounded-full shadow-md transition-all text-xs font-bold active:scale-95 group"
+                title="Add your review on Facebook"
+              >
                 <div className="flex text-amber-400">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
                   ))}
                 </div>
-                <span>5.0 Star Rating in Laurel, MD</span>
-              </div>
+                <span>Add your Review</span>
+                <ExternalLink className="w-3.5 h-3.5 text-emerald-300 group-hover:translate-x-0.5 transition-transform" />
+              </a>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { FloatingAIChatLauncher } from './components/FloatingAIChatLauncher';
 import { AIChatbot } from './components/AIChatbot';
 import { CalendlyModal } from './components/CalendlyModal';
+import { LoadingScreen } from './components/LoadingScreen';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { PatientPrepPage } from './pages/PatientPrepPage';
@@ -34,9 +35,17 @@ function getPathFromTab(tab: PageTab): string {
 }
 
 export function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [activeTab, setActiveTabState] = useState<PageTab>(() => getTabFromPath(window.location.pathname));
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -78,6 +87,8 @@ export function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans selection:bg-[#2AA84A] selection:text-white">
+      {isLoading && <LoadingScreen />}
+
       {/* 24/7 STAT Emergency Alert Top Bar */}
       <EmergencyBanner />
 

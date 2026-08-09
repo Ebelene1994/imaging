@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, ShieldAlert, Menu, X, Calendar, MessageSquare } from 'lucide-react';
 import { CENTER_INFO } from '../data/knowledgeBase';
+import { SocialIcons } from './SocialIcons';
 import { PageTab } from '../types';
 
 interface HeaderProps {
@@ -61,8 +62,10 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
           })}
         </nav>
 
-        {/* Action Buttons */}
-        <div className="hidden sm:flex items-center gap-2.5">
+        {/* Action Buttons & Social Icons */}
+        <div className="hidden lg:flex items-center gap-3">
+          <SocialIcons className="flex items-center gap-1.5" iconClassName="w-3.5 h-3.5" />
+          <div className="h-5 w-px bg-slate-200 mx-1" />
           {onOpenBookingModal && (
             <button
               onClick={onOpenBookingModal}
@@ -78,6 +81,26 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
           >
             <Phone className="w-3.5 h-3.5 text-white" />
             <span>Call (301) 615-2877</span>
+          </a>
+        </div>
+
+        {/* Medium screens action buttons (without social icons) */}
+        <div className="hidden sm:flex lg:hidden items-center gap-2.5">
+          {onOpenBookingModal && (
+            <button
+              onClick={onOpenBookingModal}
+              className="flex items-center gap-1.5 bg-[#0B4EA2] hover:bg-blue-900 text-white px-4 py-2 rounded-full text-xs font-bold shadow-md transition-all active:scale-95"
+            >
+              <Calendar className="w-3.5 h-3.5 text-emerald-300" />
+              <span>Book Scan</span>
+            </button>
+          )}
+          <a
+            href={`tel:${CENTER_INFO.phones.primary.replace(/\D/g, '')}`}
+            className="flex items-center gap-2 bg-[#2AA84A] hover:bg-green-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-md transition-all active:scale-95"
+          >
+            <Phone className="w-3.5 h-3.5 text-white" />
+            <span>Call</span>
           </a>
         </div>
 
@@ -132,6 +155,13 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
               <Phone className="w-4 h-4 text-white" />
               <span>Call (301) 615-2877</span>
             </a>
+
+            <div className="pt-2 flex flex-col items-center gap-1.5">
+              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                Follow Us
+              </span>
+              <SocialIcons variant="colorful" className="flex items-center gap-2" />
+            </div>
           </div>
         </div>
       )}

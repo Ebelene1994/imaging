@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, ShieldCheck, Heart, ArrowUp, Calendar, ExternalLink } from 'lucide-react';
 import { CENTER_INFO } from '../data/knowledgeBase';
+import { SocialIcons } from './SocialIcons';
 import { PageTab } from '../types';
 
 interface FooterProps {
@@ -73,6 +74,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
           <div className="pt-2 flex items-center gap-2 text-xs text-amber-300 font-semibold">
             <ShieldCheck className="w-4 h-4 text-[#2AA84A]" />
             <span>24/7 STAT Emergency Care Available</span>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="pt-3">
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2">
+              Connect With Us:
+            </span>
+            <SocialIcons variant="footer" />
           </div>
         </div>
 
