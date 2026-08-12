@@ -89,7 +89,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               className="bg-white rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col md:flex-row"
             >
               {/* Image Column */}
-              <div className="md:w-5/12 relative bg-slate-100 min-h-[220px]">
+              <div className="md:w-5/12 relative bg-slate-100 min-h-55">
                 <img
                   src={service.imageUrl}
                   alt={service.title}
@@ -237,7 +237,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         )}
 
         {/* Emergency & Insurance Notice */}
-        <div className="bg-gradient-to-r from-purple-900 to-[#0B4EA2] text-white p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-linear-to-r from-purple-900 to-[#0B4EA2] text-white p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-amber-300 font-extrabold text-sm uppercase">
               <ShieldAlert className="w-5 h-5" />

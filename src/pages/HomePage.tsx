@@ -85,7 +85,7 @@ const HeroServiceCarousel: React.FC<HeroCarouselProps> = ({ onBookService }) => 
   const IconComponent = currentSlide.icon;
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[400px] rounded-2xl border border-slate-200 overflow-hidden shadow-lg group bg-slate-900">
+    <div className="relative w-full h-95 sm:h-100 rounded-2xl border border-slate-200 overflow-hidden shadow-lg group bg-slate-900">
       {/* 4 Images Cross-fading */}
       {HERO_SLIDES.map((slide, idx) => {
         const isActive = idx === activeIdx;
@@ -102,7 +102,7 @@ const HeroServiceCarousel: React.FC<HeroCarouselProps> = ({ onBookService }) => 
               className="w-full h-full object-cover object-center"
             />
             {/* Dark gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/40 to-slate-900/20" />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950/95 via-slate-950/40 to-slate-900/20" />
           </div>
         );
       })}
@@ -124,9 +124,6 @@ const HeroServiceCarousel: React.FC<HeroCarouselProps> = ({ onBookService }) => 
           <span className="bg-white/95 backdrop-blur-md text-[#0B4EA2] px-3.5 py-1.5 rounded-full text-xs font-black shadow-md flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#2AA84A] animate-ping" />
             {currentSlide.badge}
-          </span>
-          <span className="bg-slate-900/80 backdrop-blur-md text-white/90 px-3 py-1 rounded-full text-[11px] font-bold border border-white/20 shadow-sm">
-            Slide {activeIdx + 1} of 4 • 10s Auto-play
           </span>
         </div>
       </div>
@@ -470,7 +467,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* Hospital Quality & Mobile Feature Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-[#0B4EA2] to-slate-900 text-white py-16 px-4 sm:px-8">
+      <section className="bg-linear-to-r from-blue-900 via-[#0B4EA2] to-slate-900 text-white py-16 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="bg-[#2AA84A] text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest inline-block">
@@ -521,7 +518,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               alt="Mobile Diagnostic Ultrasound Service"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent p-6 flex flex-col justify-end">
+            <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/30 to-transparent p-6 flex flex-col justify-end">
               <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">
                 Glims Mobile Response
               </span>
@@ -625,8 +622,8 @@ export const HomePage: React.FC<HomePageProps> = ({
         {/* Continuous Infinite Marquee Track */}
         <div className="relative w-full overflow-hidden py-2">
           {/* Gradient Edges Fade */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-slate-100 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-slate-100 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-linear-to-r from-slate-100 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-linear-to-l from-slate-100 to-transparent z-10 pointer-events-none" />
 
           <div className="animate-marquee flex gap-6">
             {[...TESTIMONIALS, ...TESTIMONIALS].map((t, idx) => (

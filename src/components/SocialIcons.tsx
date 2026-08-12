@@ -23,7 +23,7 @@ export const SocialIcons: React.FC<SocialIconsProps> = ({
         case 'youtube':
           return 'p-2.5 rounded-full bg-red-600 text-white hover:bg-red-700 transition-all hover:scale-110 shadow-md';
         case 'instagram':
-          return 'p-2.5 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white hover:opacity-90 transition-all hover:scale-110 shadow-md';
+          return 'p-2.5 rounded-full bg-linear-to-tr from-amber-500 via-rose-500 to-purple-600 text-white hover:opacity-90 transition-all hover:scale-110 shadow-md';
         case 'tiktok':
           return 'p-2.5 rounded-full bg-black text-white hover:bg-slate-900 transition-all hover:scale-110 shadow-md border border-slate-800';
         case 'x':

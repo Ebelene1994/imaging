@@ -31,7 +31,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateTab }) => {
       />
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Hero Banner */}
-        <div className="bg-gradient-to-br from-[#0B4EA2] via-blue-900 to-[#072B5C] text-white p-8 sm:p-14 rounded-3xl shadow-2xl relative overflow-hidden">
+        <div className="bg-linear-to-br from-[#0B4EA2] via-blue-900 to-[#072B5C] text-white p-8 sm:p-14 rounded-3xl shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl space-y-4 relative z-10">
             <span className="text-emerald-300 font-extrabold text-xs uppercase tracking-widest bg-white/10 px-3.5 py-1 rounded-full border border-white/20">
               Hospital Quality & Patient Excellence
@@ -173,7 +173,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateTab }) => {
                     </div>
 
                     {/* Gradient Overlay for Text */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent flex flex-col justify-end p-5">
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/60 to-transparent flex flex-col justify-end p-5">
                       <span className="text-[#2AA84A] font-extrabold text-[11px] tracking-wider uppercase mb-1 drop-shadow-sm">
                         {member.credentials}
                       </span>
@@ -305,13 +305,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateTab }) => {
           </div>
 
           {/* Elfsight Google Reviews Container */}
-          <div className="min-h-[250px] flex items-center justify-center">
+          <div className="min-h-62.5 flex items-center justify-center">
             <div className="elfsight-app-364cb5cb-4e8b-47f1-a75f-008524d6602e" data-elfsight-app-lazy></div>
           </div>
         </div>
 
         {/* CTA Card */}
-        <div className="bg-gradient-to-r from-[#0B4EA2] to-[#2AA84A] text-white p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="bg-linear-to-r from-[#0B4EA2] to-[#2AA84A] text-white p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-bold">Experience Hospital Quality Care Today</h3>
             <p className="text-xs text-blue-100 mt-1">

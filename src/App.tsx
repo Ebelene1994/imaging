@@ -7,6 +7,7 @@ import { FloatingAIChatLauncher } from './components/FloatingAIChatLauncher';
 import { AIChatbot } from './components/AIChatbot';
 import { CalendlyModal } from './components/CalendlyModal';
 import { LoadingScreen } from './components/LoadingScreen';
+import { SignUpModal } from './components/SignUpModal';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { PatientPrepPage } from './pages/PatientPrepPage';
@@ -39,6 +40,7 @@ export function App() {
   const [activeTab, setActiveTabState] = useState<PageTab>(() => getTabFromPath(window.location.pathname));
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
+  const [isSignUpOpen, setIsSignUpOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -85,6 +87,10 @@ export function App() {
     setIsBookingOpen(true);
   };
 
+  const handleOpenSignUpModal = () => {
+    setIsSignUpOpen(true);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans selection:bg-[#2AA84A] selection:text-white">
       {isLoading && <LoadingScreen />}
@@ -98,6 +104,7 @@ export function App() {
         setActiveTab={handleNavigateTab}
         onOpenChat={() => setIsChatOpen(true)}
         onOpenBookingModal={handleOpenBookingModal}
+        onOpenSignUpModal={handleOpenSignUpModal}
       />
 
       {/* Dynamic Main Page Content */}
@@ -160,6 +167,11 @@ export function App() {
       <CalendlyModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
+      />
+
+      <SignUpModal
+        isOpen={isSignUpOpen}
+        onClose={() => setIsSignUpOpen(false)}
       />
     </div>
   );

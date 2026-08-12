@@ -9,9 +9,10 @@ interface HeaderProps {
   setActiveTab: (tab: PageTab) => void;
   onOpenChat: () => void;
   onOpenBookingModal?: () => void;
+  onOpenSignUpModal?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenChat, onOpenBookingModal }) => {
+export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenChat, onOpenBookingModal, onOpenSignUpModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems: { id: PageTab; label: string }[] = [
@@ -75,13 +76,13 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
               <span>Book Scan</span>
             </button>
           )}
-          <a
-            href={`tel:${CENTER_INFO.phones.primary.replace(/\D/g, '')}`}
+          <button
+            type="button"
+            onClick={onOpenSignUpModal}
             className="flex items-center gap-2 bg-[#2AA84A] hover:bg-green-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-md transition-all active:scale-95"
           >
-            <Phone className="w-3.5 h-3.5 text-white" />
-            <span>Call (301) 615-2877</span>
-          </a>
+            <span>Sign Up</span>
+          </button>
         </div>
 
         {/* Medium screens action buttons (without social icons) */}
@@ -95,13 +96,13 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
               <span>Book Scan</span>
             </button>
           )}
-          <a
-            href={`tel:${CENTER_INFO.phones.primary.replace(/\D/g, '')}`}
+          <button
+            type="button"
+            onClick={onOpenSignUpModal}
             className="flex items-center gap-2 bg-[#2AA84A] hover:bg-green-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-md transition-all active:scale-95"
           >
-            <Phone className="w-3.5 h-3.5 text-white" />
-            <span>Call</span>
-          </a>
+            <span>Sign Up</span>
+          </button>
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -148,13 +149,16 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
                 <span>Book Scan Online</span>
               </button>
             )}
-            <a
-              href={`tel:${CENTER_INFO.phones.primary.replace(/\D/g, '')}`}
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenSignUpModal?.();
+              }}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-white bg-[#2AA84A] hover:bg-green-700 shadow-md"
             >
-              <Phone className="w-4 h-4 text-white" />
-              <span>Call (301) 615-2877</span>
-            </a>
+              <span>Sign Up</span>
+            </button>
 
             <div className="pt-2 flex flex-col items-center gap-1.5">
               <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">

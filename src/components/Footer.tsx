@@ -87,7 +87,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
 
         {/* Col 2: Services Quick Links */}
         <div>
-          <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4 text-[#2AA84A]">
+          <h4 className="text-[#2AA84A] font-bold text-sm tracking-wider uppercase mb-4">
             Our Imaging Services
           </h4>
           <ul className="space-y-2.5 text-xs text-slate-300">
@@ -126,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
 
         {/* Col 3: Contact & Address */}
         <div>
-          <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4 text-[#2AA84A]">
+          <h4 className="text-[#2AA84A] font-bold text-sm tracking-wider uppercase mb-4">
             Facility Contact Details
           </h4>
           <ul className="space-y-3 text-xs text-slate-300">
@@ -156,7 +156,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
 
         {/* Col 4: Office Hours */}
         <div>
-          <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4 text-[#2AA84A]">
+          <h4 className="text-[#2AA84A] font-bold text-sm tracking-wider uppercase mb-4">
             Facility Hours
           </h4>
           <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 space-y-2 text-xs">

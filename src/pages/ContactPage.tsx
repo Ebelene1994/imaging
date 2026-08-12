@@ -16,9 +16,31 @@ export const ContactPage: React.FC = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    formData.append('access_key', '19707a01-bbc7-4209-803a-43a84bcf10a7');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+        setFormState({ name: '', phone: '', email: '', subject: 'General Question', message: '' });
+      } else {
+        console.error('Web3Forms error', data);
+        alert('There was an error sending your message. Please try again later.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error. Please try again later.');
+    }
   };
 
   return (
@@ -99,7 +121,7 @@ export const ContactPage: React.FC = () => {
         </div>
 
         {/* Social Media Connect Banner */}
-        <div className="bg-gradient-to-r from-[#0B4EA2] to-blue-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="bg-linear-to-r from-[#0B4EA2] to-blue-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <span className="text-emerald-300 font-extrabold text-xs uppercase tracking-widest block mb-1">
               Join Our Healthcare Community
@@ -188,6 +210,7 @@ export const ContactPage: React.FC = () => {
                       Your Full Name *
                     </label>
                     <input
+                      name="name"
                       type="text"
                       required
                       value={formState.name}
@@ -202,6 +225,7 @@ export const ContactPage: React.FC = () => {
                       Phone Number *
                     </label>
                     <input
+                      name="phone"
                       type="tel"
                       required
                       value={formState.phone}
@@ -217,6 +241,7 @@ export const ContactPage: React.FC = () => {
                     Email Address *
                   </label>
                   <input
+                    name="email"
                     type="email"
                     required
                     value={formState.email}
@@ -231,6 +256,7 @@ export const ContactPage: React.FC = () => {
                     Inquiry Topic
                   </label>
                   <select
+                    name="subject"
                     value={formState.subject}
                     onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
                     className="w-full text-xs sm:text-sm p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#0B4EA2] outline-none"
@@ -248,6 +274,7 @@ export const ContactPage: React.FC = () => {
                     Your Message
                   </label>
                   <textarea
+                    name="message"
                     rows={4}
                     required
                     value={formState.message}

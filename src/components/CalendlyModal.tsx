@@ -18,11 +18,11 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
       }}
     >
       <div
-        className="bg-white w-full max-w-4xl h-[90vh] max-h-[820px] rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden"
+        className="bg-white w-full max-w-4xl h-[90vh] max-h-205 rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="bg-gradient-to-r from-[#0B4EA2] via-blue-800 to-[#2AA84A] p-4 sm:p-5 text-white flex items-center justify-between shrink-0">
+        <div className="bg-linear-to-r from-[#0B4EA2] via-blue-800 to-[#2AA84A] p-4 sm:p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center shadow-inner">
               <Calendar className="w-5 h-5 text-emerald-300" />

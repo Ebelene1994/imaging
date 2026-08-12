@@ -115,10 +115,10 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
     <div id="ai-chatbot-modal-backdrop" className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200">
       <div
         id="ai-chatbot-card"
-        className="bg-white w-full max-w-2xl h-[85vh] max-h-[700px] rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden"
+        className="bg-white w-full max-w-2xl h-[85vh] max-h-175 rounded-3xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden"
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#0B4EA2] via-blue-800 to-[#2AA84A] p-4 sm:p-5 text-white flex items-center justify-between">
+        <div className="bg-linear-to-r from-[#0B4EA2] via-blue-800 to-[#2AA84A] p-4 sm:p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center shadow-inner">
               <Bot className="w-6 h-6 text-emerald-300" />

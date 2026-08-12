@@ -22,7 +22,7 @@ export const FloatingWhatsApp: React.FC = () => {
           className="mb-3 w-80 sm:w-88 bg-white rounded-2xl shadow-2xl border border-emerald-100 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300"
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#2AA84A] to-emerald-700 p-4 text-white flex items-center justify-between">
+          <div className="bg-linear-to-r from-[#2AA84A] to-emerald-700 p-4 text-white flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-10 h-10 rounded-full bg-white overflow-hidden p-1 flex items-center justify-center shadow-inner">
