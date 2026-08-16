@@ -38,7 +38,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
     <div id="services-page" className="bg-slate-50 min-h-screen py-12 px-4 sm:px-8 font-sans">
       <SEO
         title="Diagnostic & Elective Ultrasound Services | Glims Imaging Center"
-        description="Explore 3D/4D ultrasound, OB/GYN prenatal scans, mobile bedside imaging, vascular Doppler, and abdominal diagnostics in Laurel, MD."
+        description="Explore 3D/4D ultrasound, OB/GYN prenatal scans, mobile bedside imaging, general liver, kidney, and pancreas ultrasound, vascular Doppler, and abdominal diagnostics in Laurel, MD."
         canonical="/services"
       />
       <div className="max-w-7xl mx-auto space-y-12">
@@ -61,7 +61,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             Filter Patient Group:
           </span>
           {[
-            { id: 'all', label: 'All Services (6)' },
+            { id: 'all', label: `All Services (${SERVICES.length})` },
             { id: 'pregnant_women', label: 'Pregnant Women' },
             { id: 'men', label: 'Men' },
             { id: 'children', label: 'Children & Youth' },

@@ -8,6 +8,8 @@ import { PageTab, ServiceItem } from '../types';
 import { CountUpStat } from '../components/CountUpStat';
 import { SEO } from '../components/SEO';
 
+const GENERAL_ULTRASOUND_HOME_IMAGE_URL = 'https://res.cloudinary.com/pr49uw5p/image/upload/v1786844989/kidney_scan_x5r1es.jpg';
+
 const HERO_SLIDES = [
   {
     id: '3d-4d-ultrasound',
@@ -29,9 +31,9 @@ const HERO_SLIDES = [
   },
   {
     id: 'vascular-doppler',
-    title: 'Vascular & Abdomen Doppler',
-    tagline: 'Precision Doppler Diagnostics',
-    desc: 'Comprehensive Doppler scans for internal health, blood flow, DVT screening, liver, gallbladder, and kidneys.',
+    title: 'Vascular Doppler Ultrasound',
+    tagline: 'Venous, Arterial, Aorta & Carotid',
+    desc: 'Comprehensive venous, arterial, aorta, and carotid Doppler scans for DVT screening, circulation concerns, AAA screening, and stroke-risk evaluation.',
     imageUrl: '/images/vascular-ultrasound.jpg',
     badge: 'Diagnostic Doppler',
     icon: Activity,
@@ -221,7 +223,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div id="home-page" className="font-sans bg-gray-50 text-gray-900">
       <SEO
         title="Glims Imaging Center | 3D/4D & Diagnostic Ultrasound Laurel MD"
-        description="Premier 3D/4D HD ultrasound, OB/GYN prenatal scans, vascular Doppler, abdominal diagnostic ultrasound, and 24/7 mobile bedside imaging in Laurel, MD."
+        description="Premier 3D/4D HD ultrasound, OB/GYN prenatal scans, general liver, kidney, and pancreas ultrasound, vascular Doppler, abdominal diagnostic ultrasound, and 24/7 mobile bedside imaging in Laurel, MD."
         canonical="/"
       />
       {/* Hero & Main Content Container - Sleek Interface Style */}
@@ -335,7 +337,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
             <span className="block text-3xl sm:text-4xl font-black text-[#0B4EA2]">
-              <CountUpStat end={6} suffix="+" duration={1800} />
+              <CountUpStat end={7} suffix="+" duration={1800} />
             </span>
             <span className="text-xs font-bold text-slate-600 uppercase tracking-wider mt-1.5 block">
               Core Specialties
@@ -391,7 +393,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               {/* Image Header */}
               <div className="relative h-48 overflow-hidden bg-slate-100">
                 <img
-                  src={service.imageUrl}
+                  src={service.id === 'general-ultrasound' ? GENERAL_ULTRASOUND_HOME_IMAGE_URL : service.imageUrl}
                   alt={service.title}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -551,7 +553,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
             <h3 className="font-bold text-base text-[#0B4EA2]">Select Scan & Prep</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Choose from 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, or Abdomen. Check simple hydration or fasting guidelines.
+              Choose from 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, General, or Abdomen. Check simple hydration or fasting guidelines.
             </p>
           </div>
 

@@ -56,7 +56,7 @@ export const FloatingWhatsApp: React.FC = () => {
             <div className="bg-emerald-100/70 border border-emerald-200/80 rounded-2xl p-3 text-emerald-900 shadow-sm rounded-tl-none">
               <p className="font-medium">👋 Hi there! Welcome to Glims Imaging Center.</p>
               <p className="mt-1 text-[11px] text-emerald-800">
-                Need quick help with 3D/4D, OB/GYN, Vascular, or Abdomen ultrasound booking? Message our team directly on WhatsApp!
+                Need quick help with 3D/4D, OB/GYN, Vascular, General, or Abdomen ultrasound booking? Message our team directly on WhatsApp!
               </p>
             </div>
 

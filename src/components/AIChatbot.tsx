@@ -24,7 +24,7 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
     {
       id: 'init',
       sender: 'bot',
-      text: `Hello! I am Glims Health Assistant 🩺. I am here to answer any questions about our 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, and Abdomen ultrasound services at Glims Imaging Center in Laurel, MD. How can I help you today?`,
+      text: `Hello! I am Glims Health Assistant 🩺. I am here to answer any questions about our 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, General, and Abdomen ultrasound services at Glims Imaging Center in Laurel, MD. How can I help you today?`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       suggestions: QUICK_PROMPTS.slice(0, 3),
     },
@@ -73,7 +73,7 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
       } else if (lower.includes("3d") || lower.includes("4d") || lower.includes("hd live")) {
         botReply = "Our 3D/4D HD Live ultrasound provides crisp, realistic motion images of your baby. Best viewed between 24 and 32 weeks of pregnancy. You can book an appointment online or call (301) 615-2877.";
       } else if (lower.includes("prep") || lower.includes("water") || lower.includes("fast") || lower.includes("eat") || lower.includes("drink")) {
-        botReply = "Scan Preparation Guidelines:\n- Abdomen Ultrasound: Fasting for 6-8 hours before test.\n- Pelvic / OB / Gender Reveal: Drink 32-40 oz of water 1 hour prior to scan without emptying your bladder.\n- Vascular Scans: Loose comfortable clothing, no fasting required.";
+        botReply = "Scan Preparation Guidelines:\n- Abdomen or General Ultrasound: Fasting for 6-8 hours may be required for liver or pancreas evaluation.\n- Pelvic / OB / Gender Reveal: Drink 32-40 oz of water 1 hour prior to scan without emptying your bladder.\n- Vascular Scans: Loose comfortable clothing; fasting may be requested for aorta exams.";
       } else if (lower.includes("mobile") || lower.includes("home") || lower.includes("bedside")) {
         botReply = "Yes! Glims Imaging Center offers Mobile Ultrasound services directly at your home, assisted living, or doctor's office for patients with mobility needs or tight schedules.";
       } else if (lower.includes("emergency") || lower.includes("urgent") || lower.includes("stat")) {
@@ -81,7 +81,7 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
       } else if (lower.includes("price") || lower.includes("cost") || lower.includes("insurance") || lower.includes("pay")) {
         botReply = "We accept major health insurance plans with a physician order and offer discounted self-pay packages for elective 3D/4D and Gender Reveal scans. HSA/FSA payments are fully supported!";
       } else {
-        botReply = "Welcome to Glims Imaging Center in Laurel, MD. We offer 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, and Abdominal Ultrasound scans. Would you like to schedule an appointment or speak with our team at (301) 615-2877?";
+        botReply = "Welcome to Glims Imaging Center in Laurel, MD. We offer 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, General, and Abdominal Ultrasound scans. Would you like to schedule an appointment or speak with our team at (301) 615-2877?";
       }
 
       const botMsg: ChatMessage = {

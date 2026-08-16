@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
               Ready to schedule your ultrasound at Glims Imaging Center?
             </h3>
             <p className="text-sm text-blue-100 mt-1 max-w-2xl">
-              Offering 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, and Abdominal scans in Laurel, MD.
+              Offering 3D/4D, Mobile, OB/GYN, Gender Reveal, Vascular, General, and Abdominal scans in Laurel, MD.
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0">
@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
           </div>
 
           <p className="text-xs leading-relaxed text-slate-300">
-            Glims Imaging Center provides professional, board-certified diagnostic ultrasound services including 3D/4D, Mobile Ultrasound, OB/GYN, Gender Reveal, Vascular, and Abdomen imaging for pregnant women, men, children, and youth.
+            Glims Imaging Center provides professional, board-certified diagnostic ultrasound services including 3D/4D, Mobile Ultrasound, OB/GYN, Gender Reveal, Vascular, General, and Abdomen imaging for pregnant women, men, children, and youth.
           </p>
 
           <div className="pt-2 flex items-center gap-2 text-xs text-amber-300 font-semibold">
@@ -114,6 +114,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenBookingModa
             <li>
               <button onClick={() => { onNavigateTab('services'); scrollToTop(); }} className="hover:text-emerald-400 transition-colors">
                 • Vascular & Doppler Screening
+              </button>
+            </li>
+            <li>
+              <button onClick={() => { onNavigateTab('services'); scrollToTop(); }} className="hover:text-emerald-400 transition-colors">
+                • General Ultrasound
               </button>
             </li>
             <li>
