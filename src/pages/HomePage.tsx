@@ -7,6 +7,7 @@ import { CENTER_INFO, SERVICES, TESTIMONIALS, FAQS } from '../data/knowledgeBase
 import { PageTab, ServiceItem } from '../types';
 import { CountUpStat } from '../components/CountUpStat';
 import { SEO } from '../components/SEO';
+import { UltrasoundCoachingCard } from '../components/UltrasoundCoachingCard';
 
 const GENERAL_ULTRASOUND_HOME_IMAGE_URL = 'https://res.cloudinary.com/pr49uw5p/image/upload/v1786844989/kidney_scan_x5r1es.jpg';
 
@@ -223,7 +224,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     <div id="home-page" className="font-sans bg-gray-50 text-gray-900">
       <SEO
         title="Glims Imaging Center | 3D/4D & Diagnostic Ultrasound Laurel MD"
-        description="Premier 3D/4D HD ultrasound, OB/GYN prenatal scans, general liver, kidney, and pancreas ultrasound, vascular Doppler, abdominal diagnostic ultrasound, and 24/7 mobile bedside imaging in Laurel, MD."
+        description="Premier 3D/4D HD ultrasound, OB/GYN prenatal scans, general, vascular Doppler, abdominal ultrasound, mobile bedside imaging, and ultrasound coaching in Laurel, MD."
         canonical="/"
       />
       {/* Hero & Main Content Container - Sleek Interface Style */}
@@ -465,6 +466,10 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <UltrasoundCoachingCard />
         </div>
       </section>
 

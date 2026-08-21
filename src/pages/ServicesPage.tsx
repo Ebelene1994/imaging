@@ -6,6 +6,7 @@ import {
 import { SERVICES, CENTER_INFO, FAQS } from '../data/knowledgeBase';
 import { DemographicGroup, PageTab, ServiceItem } from '../types';
 import { SEO } from '../components/SEO';
+import { UltrasoundCoachingCard } from '../components/UltrasoundCoachingCard';
 
 interface ServicesPageProps {
   onNavigateTab: (tab: PageTab) => void;
@@ -38,7 +39,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
     <div id="services-page" className="bg-slate-50 min-h-screen py-12 px-4 sm:px-8 font-sans">
       <SEO
         title="Diagnostic & Elective Ultrasound Services | Glims Imaging Center"
-        description="Explore 3D/4D ultrasound, OB/GYN prenatal scans, mobile bedside imaging, general liver, kidney, and pancreas ultrasound, vascular Doppler, and abdominal diagnostics in Laurel, MD."
+        description="Explore 2D, pregnancy, pelvic, breast, thyroid, vascular Doppler, carotid, venous, arterial, 3D/4D, mobile, abdominal ultrasound services, and ultrasound coaching in Laurel, MD."
         canonical="/services"
       />
       <div className="max-w-7xl mx-auto space-y-12">
@@ -154,6 +155,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
               </div>
             </div>
           ))}
+        </div>
+
+        <div id="ultrasound-coaching" className="pt-2">
+          <UltrasoundCoachingCard />
         </div>
 
         {/* Detailed Modal Popup for Clinical Info */}

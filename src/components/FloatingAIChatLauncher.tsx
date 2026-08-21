@@ -1,10 +1,12 @@
 import React from 'react';
-import { Bot, Stethoscope } from 'lucide-react';
+import { Stethoscope } from 'lucide-react';
 
 interface FloatingAIChatLauncherProps {
   onOpenChat: () => void;
   isOpen: boolean;
 }
+
+const ASSISTANT_LOGO_URL = 'https://res.cloudinary.com/pr49uw5p/image/upload/v1785519229/logo_thkuq0.png';
 
 export const FloatingAIChatLauncher: React.FC<FloatingAIChatLauncherProps> = ({ onOpenChat, isOpen }) => {
   if (isOpen) return null;
@@ -27,7 +29,13 @@ export const FloatingAIChatLauncher: React.FC<FloatingAIChatLauncherProps> = ({ 
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"></span>
         </span>
-        <Bot className="w-6 h-6 text-emerald-300" />
+        <img
+          src={ASSISTANT_LOGO_URL}
+          alt=""
+          aria-hidden="true"
+          referrerPolicy="no-referrer"
+          className="w-7 h-7 rounded-full bg-white object-contain p-0.5"
+        />
         <span className="hidden sm:inline-block font-bold text-xs tracking-wide">
           Glims AI Assistant
         </span>

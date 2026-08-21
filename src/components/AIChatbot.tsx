@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, User, X, Send, Stethoscope, RefreshCw, Calendar, Phone, CheckCircle2 } from 'lucide-react';
+import { User, X, Send, Stethoscope, RefreshCw, Calendar, Phone, CheckCircle2 } from 'lucide-react';
 import { CENTER_INFO } from '../data/knowledgeBase';
 import { ChatMessage, PageTab } from '../types';
 
@@ -18,6 +18,8 @@ const QUICK_PROMPTS = [
   'Is 24/7 emergency scan care available?',
   'How do I schedule an appointment?',
 ];
+
+const ASSISTANT_LOGO_URL = 'https://res.cloudinary.com/pr49uw5p/image/upload/v1785519229/logo_thkuq0.png';
 
 export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigateTab, onOpenBookingModal }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -120,8 +122,14 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
         {/* Header */}
         <div className="bg-linear-to-r from-[#0B4EA2] via-blue-800 to-[#2AA84A] p-4 sm:p-5 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center shadow-inner">
-              <Bot className="w-6 h-6 text-emerald-300" />
+            <div className="w-10 h-10 rounded-2xl bg-white backdrop-blur border border-white/30 flex items-center justify-center shadow-inner overflow-hidden p-1">
+              <img
+                src={ASSISTANT_LOGO_URL}
+                alt=""
+                aria-hidden="true"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -132,8 +140,6 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
                 </span>
               </div>
               <p className="text-xs text-blue-100 flex items-center gap-2">
-                <span>Knowledge Base Connected</span>
-                <span>•</span>
                 <span className="text-emerald-300 font-semibold">(301) 615-2877</span>
               </p>
             </div>
@@ -187,8 +193,14 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
               className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.sender === 'bot' && (
-                <div className="w-8 h-8 rounded-xl bg-[#0B4EA2] text-white flex items-center justify-center shrink-0 shadow-sm mt-1">
-                  <Bot className="w-4 h-4 text-emerald-300" />
+                <div className="w-8 h-8 rounded-xl bg-white border border-blue-100 flex items-center justify-center shrink-0 shadow-sm mt-1 overflow-hidden p-1">
+                  <img
+                    src={ASSISTANT_LOGO_URL}
+                    alt=""
+                    aria-hidden="true"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               )}
 
@@ -234,8 +246,14 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ isOpen, onClose, onNavigat
 
           {loading && (
             <div className="flex gap-3 items-center text-slate-500 text-xs">
-              <div className="w-8 h-8 rounded-xl bg-[#0B4EA2] text-white flex items-center justify-center shrink-0">
-                <Bot className="w-4 h-4 text-emerald-300" />
+              <div className="w-8 h-8 rounded-xl bg-white border border-blue-100 flex items-center justify-center shrink-0 overflow-hidden p-1">
+                <img
+                  src={ASSISTANT_LOGO_URL}
+                  alt=""
+                  aria-hidden="true"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="bg-white border border-slate-200 rounded-2xl px-4 py-3 flex items-center gap-2 shadow-sm">
                 <RefreshCw className="w-4 h-4 text-[#0B4EA2] animate-spin" />
