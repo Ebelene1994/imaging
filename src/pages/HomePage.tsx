@@ -210,6 +210,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   onOpenBookingModal,
 }) => {
   const [openFaqId, setOpenFaqId] = useState<string>('faq-1');
+  const homepageServices = SERVICES.slice(0, 6);
 
   const handleBookService = (_serviceId?: string) => {
     if (onOpenBookingModal) {
@@ -386,7 +387,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES.map((service) => (
+          {homepageServices.map((service) => (
             <div
               key={service.id}
               className="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-[#0B4EA2] shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col group"
@@ -466,6 +467,19 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <button
+            onClick={() => {
+              onNavigateTab('services');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="bg-[#0B4EA2] hover:bg-blue-800 text-white font-extrabold px-6 py-3 rounded-full text-sm flex items-center justify-center gap-2 shadow-lg transition-all hover:scale-105"
+          >
+            <span>View More Services</span>
+            <ArrowRight className="w-4 h-4 text-emerald-300" />
+          </button>
         </div>
 
         <div className="mt-12">

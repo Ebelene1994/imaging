@@ -91,7 +91,7 @@ export const UltrasoundCoachingCard: React.FC<UltrasoundCoachingCardProps> = ({ 
 
         <div className="space-y-3 rounded-2xl bg-slate-50 border border-slate-200 p-4 text-xs text-slate-600 leading-relaxed">
           <p className="font-semibold text-slate-800">
-            Please note in the booking section what you would like coaching on.
+            Note:
           </p>
           <p>Hands-on training only. No lecture. No refunds.</p>
           <p>Please bring a guest who is willing to be scanned. A volunteer model will be provided if needed.</p>
